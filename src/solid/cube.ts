@@ -1,6 +1,6 @@
 import { Shape } from '../interfaces/shape.interface';
 
-export class Square implements Shape {
+export class Cube implements Shape {
   length: number;
 
   constructor(length: number) {
@@ -8,6 +8,6 @@ export class Square implements Shape {
   }
 
   get area() {
-    return Math.pow(this.length, 2);
+    return 6 * Math.pow(this.length, 2);
   }
 }

@@ -7,7 +7,7 @@ export class Circle implements Shape {
     this.radius = radius;
   }
 
-  getRadius() {
-    return this.radius;
+  get area() {
+    return Math.PI * Math.pow(this.radius, 2);
   }
 }
