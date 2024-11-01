@@ -1,13 +1,16 @@
-import { AreaCalculator } from "./area-calculator";
-import { Circle } from "./circle";
-import { Square } from "./square";
-import { Shape } from "../interfaces/shape.interface";
+import { AreaCalculator } from './solid/area-calculator';
+import { Circle } from './solid/circle';
+import { Square } from './solid/square';
+import { Shape } from './interfaces/shape.interface';
+import { ShapesPrinter } from './solid/shapes-printer';
 
 let areaCalculator = new AreaCalculator();
 let circle = new Circle(10);
 let square = new Square(10);
+const shapesPrinter = new ShapesPrinter();
 
 const shapes: Shape[] = [circle, square];
-
 let sum = areaCalculator.sum(shapes);
-console.log("sum = ", sum);
+
+console.log(shapesPrinter.json(sum));
+console.log(shapesPrinter.csv(sum));
